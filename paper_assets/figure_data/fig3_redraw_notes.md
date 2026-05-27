@@ -1,0 +1,1 @@
+Fig.3 can be kept separate as a theory/geometry figure. If page budget is tight, merge Fig.2 and Fig.3 by keeping Fig.2's MRW time-series panels and adding only one zeta(q) panel; move alpha/f(alpha) to appendix.

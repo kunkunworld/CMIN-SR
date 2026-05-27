@@ -1,0 +1,75 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\graphicspath{{figures/}}
+
+\title{Validity-Aware Spectral Diagnostics for Multifractal Random Walk Inference Under Finite Samples}
+\author{Yin Jiacheng}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Multiscale fluctuations in complex stochastic systems often exhibit heavy
+tails, intermittency, and nonlinear scaling spectra, features that are commonly
+interpreted as evidence of multifractality. Under finite observations, however,
+this interpretation is intrinsically ambiguous: stable monofractal processes
+may produce apparently regular scaling, heavy-tailed or regime-switching
+signals may generate spurious curvature, and high-order empirical moments can
+be strongly affected by sample length, scale range, and the choice of
+\(q\)-grid. This paper proposes CMIN-SR, a validity-aware spectral diagnostic
+framework for assessing multifractal random walk (MRW)-like evidence under
+finite samples. Rather than treating neural inference as unconstrained spectrum
+regression, CMIN-SR separates empirical spectrum estimation from spectral
+interpretation. An observed scaling spectrum is projected onto competing
+monofractal and MRW spectral families, and calibrated diagnostic scores are
+reported for scaling stability, nonlinear curvature, monofractal
+compatibility, MRW compatibility, boundary behavior, and instability.
+
+Controlled analytic-spectrum experiments show that the spectral-geometry
+calibrator learns the intended distinction between linear, boundary, and
+curved spectra. Across three random seeds, linear monofractal spectra receive
+low MRW compatibility and low curvature scores, whereas strongly curved MRW
+spectra receive high curvature and MRW-compatibility scores. In representative
+runs, the normalized MRW-compatibility score increases from about \(0.13\) for
+linear spectra to about \(0.94\) for curved MRW spectra. On raw finite samples,
+zeta-alignment reduces monofractal false positives in the documented
+\(T=1024\) comparison, lowering fGn MRW compatibility from about \(0.73\) to
+\(0.36\). However, deterministic and classical empirical-spectrum estimators,
+including aggregate structure functions, MFDFA, and lightweight Haar
+wavelet-style controls, do not remove the short-window curvature bottleneck:
+MFDFA improves some error and high-\(\lambda^2\) detection metrics, but
+projected \(\lambda^2\) remains weakly and inconsistently correlated with the
+known intermittency parameter in the tested regime. These findings identify
+empirical spectrum estimation and finite-sample curvature recovery, rather
+than spectral interpretation alone, as the central bottleneck in short-window
+MRW inference. CMIN-SR should therefore be understood as a calibrated
+diagnostic framework for multifractal spectral evidence, not as proof of an
+MRW data-generating mechanism.
+\end{abstract}
+
+\input{sections/01_introduction}
+\input{sections/02_framework}
+\input{sections/03_methods}
+\input{sections/04_experiments}
+\input{sections/05_results}
+\input{sections/06_failure_analysis}
+\input{sections/07_discussion}
+\input{sections/08_conclusion}
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\appendix
+\input{sections/appendix_ablation_notes}
+
+\end{document}

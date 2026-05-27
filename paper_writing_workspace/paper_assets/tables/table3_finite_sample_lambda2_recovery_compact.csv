@@ -1,0 +1,4 @@
+T,mean_lambda2_corr,best_lambda2_corr,best_estimator,worst_lambda2_corr,mean_high_lambda_detection_rate
+512,-0.162,-0.125,ols,-0.177,0.000
+1024,0.097,0.137,smoothed,-0.022,0.000
+2048,-0.051,-0.051,bootstrap,-0.053,0.000

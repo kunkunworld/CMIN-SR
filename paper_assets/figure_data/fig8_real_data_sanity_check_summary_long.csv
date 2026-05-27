@@ -1,0 +1,33 @@
+factor,source_name,n_windows,metric,metric_label,surrogate_type,mean_gap_original_minus_surrogate
+Mom,F-F_Momentum_Factor_daily:Mom,102,lambda2_gap,Mean gap in projected lambda^2,fully_shuffled,0.0136658365302971
+Mom,F-F_Momentum_Factor_daily:Mom,102,lambda2_gap,Mean gap in projected lambda^2,block_shuffled,-0.0135240119414404
+Mom,F-F_Momentum_Factor_daily:Mom,102,p_MRW_gap,Mean gap in p_MRW proxy,fully_shuffled,0.0220896368489493
+Mom,F-F_Momentum_Factor_daily:Mom,102,p_MRW_gap,Mean gap in p_MRW proxy,block_shuffled,-0.0210657030066058
+Mom,F-F_Momentum_Factor_daily:Mom,102,f_alpha_width_gap,Mean gap in f(alpha) width,fully_shuffled,0.0273316730605942
+Mom,F-F_Momentum_Factor_daily:Mom,102,f_alpha_width_gap,Mean gap in f(alpha) width,block_shuffled,-0.0270480238828809
+Mom,F-F_Momentum_Factor_daily:Mom,102,logvol_cov_slope_gap,Mean gap in log-volatility covariance slope,fully_shuffled,0.0293757064388094
+Mom,F-F_Momentum_Factor_daily:Mom,102,logvol_cov_slope_gap,Mean gap in log-volatility covariance slope,block_shuffled,-0.0163560561167309
+HML,F-F_Research_Data_Factors_daily:HML,102,lambda2_gap,Mean gap in projected lambda^2,fully_shuffled,0.0099931874524926
+HML,F-F_Research_Data_Factors_daily:HML,102,lambda2_gap,Mean gap in projected lambda^2,block_shuffled,-0.0054936969927351
+HML,F-F_Research_Data_Factors_daily:HML,102,p_MRW_gap,Mean gap in p_MRW proxy,fully_shuffled,0.0154814596717822
+HML,F-F_Research_Data_Factors_daily:HML,102,p_MRW_gap,Mean gap in p_MRW proxy,block_shuffled,-0.0087849519773045
+HML,F-F_Research_Data_Factors_daily:HML,102,f_alpha_width_gap,Mean gap in f(alpha) width,fully_shuffled,0.0199863749049852
+HML,F-F_Research_Data_Factors_daily:HML,102,f_alpha_width_gap,Mean gap in f(alpha) width,block_shuffled,-0.0109873939854703
+HML,F-F_Research_Data_Factors_daily:HML,102,logvol_cov_slope_gap,Mean gap in log-volatility covariance slope,fully_shuffled,0.018039719111048
+HML,F-F_Research_Data_Factors_daily:HML,102,logvol_cov_slope_gap,Mean gap in log-volatility covariance slope,block_shuffled,-0.0104886188688362
+Mkt-RF,F-F_Research_Data_Factors_daily:Mkt-RF,102,lambda2_gap,Mean gap in projected lambda^2,fully_shuffled,0.0085681646051299
+Mkt-RF,F-F_Research_Data_Factors_daily:Mkt-RF,102,lambda2_gap,Mean gap in projected lambda^2,block_shuffled,-0.004668379509369
+Mkt-RF,F-F_Research_Data_Factors_daily:Mkt-RF,102,p_MRW_gap,Mean gap in p_MRW proxy,fully_shuffled,0.0161687077518115
+Mkt-RF,F-F_Research_Data_Factors_daily:Mkt-RF,102,p_MRW_gap,Mean gap in p_MRW proxy,block_shuffled,-0.0072122420417534
+Mkt-RF,F-F_Research_Data_Factors_daily:Mkt-RF,102,f_alpha_width_gap,Mean gap in f(alpha) width,fully_shuffled,0.0171363292102598
+Mkt-RF,F-F_Research_Data_Factors_daily:Mkt-RF,102,f_alpha_width_gap,Mean gap in f(alpha) width,block_shuffled,-0.009336759018738
+Mkt-RF,F-F_Research_Data_Factors_daily:Mkt-RF,102,logvol_cov_slope_gap,Mean gap in log-volatility covariance slope,fully_shuffled,0.0211003192483327
+Mkt-RF,F-F_Research_Data_Factors_daily:Mkt-RF,102,logvol_cov_slope_gap,Mean gap in log-volatility covariance slope,block_shuffled,-0.0080879252267122
+SMB,F-F_Research_Data_Factors_daily:SMB,102,lambda2_gap,Mean gap in projected lambda^2,fully_shuffled,0.0128865989699665
+SMB,F-F_Research_Data_Factors_daily:SMB,102,lambda2_gap,Mean gap in projected lambda^2,block_shuffled,0.0002931596778245
+SMB,F-F_Research_Data_Factors_daily:SMB,102,p_MRW_gap,Mean gap in p_MRW proxy,fully_shuffled,0.0197626957771912
+SMB,F-F_Research_Data_Factors_daily:SMB,102,p_MRW_gap,Mean gap in p_MRW proxy,block_shuffled,-0.0011008449347183
+SMB,F-F_Research_Data_Factors_daily:SMB,102,f_alpha_width_gap,Mean gap in f(alpha) width,fully_shuffled,0.0257731979399331
+SMB,F-F_Research_Data_Factors_daily:SMB,102,f_alpha_width_gap,Mean gap in f(alpha) width,block_shuffled,0.0005863193556491
+SMB,F-F_Research_Data_Factors_daily:SMB,102,logvol_cov_slope_gap,Mean gap in log-volatility covariance slope,fully_shuffled,0.0238309167676521
+SMB,F-F_Research_Data_Factors_daily:SMB,102,logvol_cov_slope_gap,Mean gap in log-volatility covariance slope,block_shuffled,-0.002853332444956

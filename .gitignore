@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Large/generated experiment artifacts
+checkpoints/
+outputs/
+data/
+*.pt
+*.pth
+*.ckpt
+*.npz
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Local editor history
+.history/
+.vscode/settings.json
+
+# OS files
+Thumbs.db
+.DS_Store

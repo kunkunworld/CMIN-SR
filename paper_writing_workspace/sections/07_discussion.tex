@@ -1,0 +1,83 @@
+\section{Discussion}
+
+\subsection{A diagnostic rather than a mechanism test}
+
+The main outcome of this study is a diagnostic decomposition of finite-sample
+multifractal evidence. A high scaling score means that scaling is stable over
+the tested scales. It does not imply nonlinear curvature. A nonzero
+\(\lambda^2_{\mathrm{proj}}\) means that the empirical spectrum has an
+MRW-family projection coordinate. It does not prove that the sample was generated
+by an MRW. A high MRW diagnostic score should be interpreted only together
+with the monofractal residual, MRW residual, curvature score, boundary score,
+and instability warnings.
+
+This caution is not a weakness of the framework; it is the point of the
+framework. Finite empirical spectra often invite overinterpretation. CMIN-SR
+is designed to make such overinterpretation harder by forcing the analyst to
+compare competing explanations.
+
+\subsection{Relation to classical multifractal estimators}
+
+Classical estimators such as structure functions, MFDFA, and wavelet-based
+methods remain central to multifractal analysis
+\cite{muzy1991wavelets,muzy1993multifractal,kantelhardt2002mfdfa,jaffard2007wavelet,wendt2007bootstrap}.
+CMIN-SR is
+not proposed as a replacement for these methods. It is better understood as a
+spectral diagnostic layer that can sit on top of empirical spectra and ask how
+the estimated geometry relates to monofractal and MRW-family projections.
+
+The supplemental baseline results are consistent with this interpretation.
+MFDFA can reduce error relative to a simple structure-function baseline in
+some settings, but high-\(\lambda^2\) MRW curvature remains difficult in the
+finite ensemble baseline. The added Haar wavelet-leader and WTMM-style
+controls provide a lightweight wavelet comparison and do not remove the
+short-window recovery limitation. A full production WTMM or wavelet-leader
+package would still be valuable as future benchmarking, but the present
+classical controls already support the conservative finite-sample conclusion.
+
+\subsection{Implications for complex systems}
+
+The framework is especially relevant for complex systems where multiple
+mechanisms can produce similar spectral signatures. In finance, for example,
+heavy tails, volatility clustering, regime changes, and temporal dependence
+can all affect scaling statistics
+\cite{cont2001stylized,bouchaud2000apparent,zhou2009components,barunik2012source}.
+The Fama-French sanity check shows small positive original-vs-shuffled gaps,
+which is consistent with some temporal multiscale dependence. But this is not
+MRW mechanism validation. The right conclusion is narrower: the diagnostic can
+be applied to real return series and shows original-vs-shuffled differences
+consistent with temporal structure.
+
+\subsection{Limitations}
+
+Several limitations are important.
+
+First, the framework depends on the MRW parabolic projection family. This
+makes the diagnostics interpretable, but it also means that non-MRW
+multifractal processes may be only partially represented. The coordinate
+\(\lambda^2_{\mathrm{proj}}\) should therefore be interpreted as an
+MRW-family curvature coordinate, not as a universal intermittency parameter.
+
+Second, the finite-sample identifiability result is conditional on the tested
+sample lengths, \(q\)-grid, scale sets, and estimator family. The current
+evidence does not rule out better recovery with longer samples, denser scale
+support, or different estimators. It does show that short-window recovery is
+not reliable under the tested setting.
+
+Third, the reported diagnostic scores are calibrated scores in the modeling
+sense, not fully validated statistical probabilities. The project does not yet
+include reliability diagrams, expected calibration error, or Brier-score
+calibration analysis. The scores should therefore be read as comparable
+diagnostic indices rather than posterior probabilities of a data-generating
+mechanism.
+
+Fourth, the real-data evidence is exploratory. The Fama-French experiment uses
+surrogate comparison to check diagnostic responsiveness, not to establish a
+true data-generating mechanism. Stronger real-world claims would require
+domain-specific preprocessing, additional surrogate designs, uncertainty
+analysis, and comparison against alternative multifractal estimators.
+
+Finally, the classical baseline comparison is still not exhaustive. Structure
+functions, MFDFA, and compact Haar wavelet controls are included, but these
+wavelet rows are not substitutes for a full production WTMM or wavelet-leader
+benchmark. This should be acknowledged openly in any submission.
