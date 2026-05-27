@@ -1,6 +1,6 @@
 # GitHub Upload Notes
 
-This folder is a cleaned upload package for the CMIN-SR project.
+This folder is a cleaned public upload package for the CMIN-SR project.
 
 ## Suggested repository name
 
@@ -29,6 +29,8 @@ Validity-aware spectral diagnostics for multifractal random walk inference under
 - full `outputs/`
 - raw `data/`
 - Python caches and LaTeX build caches
+- internal reviewer notes, TODO audits, draft planning files, and long
+  development/refactor logs
 
 These are excluded to keep the GitHub repository lightweight. The manuscript
 and paper assets include the key tables and figures needed to understand the
