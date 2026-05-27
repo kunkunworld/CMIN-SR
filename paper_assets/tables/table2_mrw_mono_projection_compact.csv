@@ -1,8 +1,0 @@
-process_type,lambda2_proj,mrw_residual,mono_residual,mrw_vs_mono_gain,tail_instability
-MRW,0.048,0.038,0.051,0.247,0.012
-Low-lambda2 MRW,0.050,0.041,0.055,0.259,0.012
-fGn,0.045,0.038,0.050,0.231,0.012
-iid Gaussian,0.000,0.051,0.045,0.000,0.001
-iid Student-t,0.000,0.376,0.405,0.071,0.991
-"GARCH(1,1)",0.000,0.335,0.370,0.088,0.907
-Regime-switching Gaussian,0.000,0.353,0.383,0.078,0.966
