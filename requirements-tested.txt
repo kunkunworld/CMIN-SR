@@ -1,0 +1,9 @@
+# Direct package versions used for public-release checks on Python 3.10.14.
+# The tested PyTorch build was 2.3.1+cu121; choose the appropriate device wheel.
+# This is a constraints file, not a lock of all transitive dependencies.
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.14.0
+scikit-learn==1.5.2
+torch==2.3.1
+matplotlib==3.9.1

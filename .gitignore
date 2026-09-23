@@ -14,11 +14,14 @@ env/
 # Large/generated experiment artifacts
 checkpoints/
 outputs/
+revision/results/
+revision/e0_provenance/
 data/
 *.pt
 *.pth
 *.ckpt
 *.npz
+*.npy
 
 # LaTeX build artifacts
 *.aux
