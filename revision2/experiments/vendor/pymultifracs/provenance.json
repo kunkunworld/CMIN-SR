@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/neurospin/pymultifracs",
+  "commit": "ad254f31500a71374eb28c85a0905d9fa2ae2c28",
+  "retrieved_on": "2026-10-07",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/neurospin/pymultifracs/ad254f31500a71374eb28c85a0905d9fa2ae2c28/LICENSE",
+      "local_name": "LICENSE",
+      "sha256": "8c70773ae1640d7373472ec4814de5460dd22415d40e65dbdda21243c0ba0c86"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/neurospin/pymultifracs/ad254f31500a71374eb28c85a0905d9fa2ae2c28/pymultifracs/simul/pzutils.py",
+      "local_name": "pzutils.py",
+      "sha256": "a4ea43d815a8b6ac03e726c64d94a928c5d33687032fd61cdfa8891754e478d2"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/neurospin/pymultifracs/ad254f31500a71374eb28c85a0905d9fa2ae2c28/pymultifracs/simul/fbm.py",
+      "local_name": "fbm.py",
+      "sha256": "812e94842e793d57b64bc5fc4d1adf00349a91bdcae7de6955702f3870316cba"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/neurospin/pymultifracs/ad254f31500a71374eb28c85a0905d9fa2ae2c28/pymultifracs/simul/mrw.py",
+      "local_name": "mrw.py",
+      "sha256": "20f340f0488f7b4d31892e9079fca9b4404812e3c71ab3c74c9ea010daf532df"
+    }
+  ],
+  "modifications": "None. Loaded as a namespace package without package installation.",
+  "selected_method": "cme; independent scipy Cholesky reference implemented separately"
+}

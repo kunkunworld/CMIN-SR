@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-07",
+  "purpose": "Independent validation and matched comparisons with frozen corrected algorithms",
+  "environment": "Python 3.10.14; see requirements-tested.txt; CUDA for exact neural replay",
+  "priority_order": ["E1_generator_validation", "E2_signed_curvature", "E3_common_sample_comparison", "E4_nonwhite_fgn"],
+  "primary_neural_config": "full_c025",
+  "training_seeds": [51001, 51002, 51003],
+  "existing_holdout": "revision/results/neural_eval_formal",
+  "lengths": [512, 1024, 2048],
+  "bootstrap_repetitions": 2000,
+  "q": [0.5, 1, 1.5, 2, 2.5, 3],
+  "primary_scales": [2, 4, 8, 16, 32, 64],
+  "MRW_reference_scope": "H=0.5; other H only pure fGn or explicitly unvalidated modulation stress",
+  "long_validation": {
+    "lengths": [65536, 262144],
+    "integral_scale": 4096,
+    "lambda2": [0, 0.01, 0.03, 0.1, 0.2],
+    "seeds": [202610071, 202610072, 202610073, 202610074, 202610075],
+    "replicates_per_seed": 8,
+    "scale_windows": {"historical": [2, 4, 8, 16, 32, 64], "interior": [32, 64, 128, 256, 512]},
+    "public_crosscheck_replicates_per_seed": 4
+  },
+  "public_reference": {"repository": "https://github.com/neurospin/pymultifracs", "commit": "ad254f31500a71374eb28c85a0905d9fa2ae2c28", "method": "cme", "lambda_convention": "public lam=sqrt(our lambda2)"},
+  "decision_rules": [
+    "Stop on covariance normalization or deterministic numerical contract failure.",
+    "Do not select model, seeds, scales or reported cells using test performance.",
+    "Report finite-discretization and long-record discrepancies, not an exact asymptotic equality claim.",
+    "Reuse frozen validation thresholds for nonwhite-fGn tests; no threshold retuning.",
+    "Three predictions of one sequence are not three independent samples.",
+    "Haar methods remain explicit approximations, not complete WTMM/wavelet-leader implementations.",
+    "Preserve prior outputs and checkpoints; use a new output directory for every run."
+  ]
+}

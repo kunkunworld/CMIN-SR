@@ -16,6 +16,8 @@ checkpoints/
 outputs/
 revision/results/
 revision/e0_provenance/
+revision2/experiments/results/
+revision2/experiments/figures/
 data/
 *.pt
 *.pth

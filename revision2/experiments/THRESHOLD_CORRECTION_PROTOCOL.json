@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-07",
+  "purpose": "E5: minimal correction of null-threshold transfer, no network retraining",
+  "motivation": "Post-E4 amendment: original H=.5 thresholds transfer poorly to persistent fGn. E4 remains an adverse result, not a tuning set.",
+  "lengths": [512, 1024, 2048],
+  "training_seeds": [51001, 51002, 51003],
+  "methods": ["structure_ols", "full_c025"],
+  "scores": ["p_mrw", "lambda2_proj"],
+  "primary_score": "p_mrw",
+  "alpha": 0.05,
+  "calibration": {
+    "H": [0.2, 0.4, 0.5, 0.6, 0.8],
+    "data_seeds": [202610111, 202610112, 202610113, 202610114, 202610115],
+    "replicates_per_seed_H": 100,
+    "N_per_H_length": 500,
+    "rule": "For each H, sort null scores and use one-based rank ceil((n+1)*(1-alpha)). Take the maximum of these group quantiles. Reject strictly above the frozen threshold. One threshold per length/method/checkpoint/score, not conditioned on test H."
+  },
+  "test": {
+    "fGn_H": [0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
+    "data_seeds": [202610121, 202610122, 202610123, 202610124, 202610125],
+    "fGn_replicates_per_seed_H": 60,
+    "MRW_H": 0.5,
+    "MRW_lambda2": [0, 0.005, 0.01, 0.03, 0.06, 0.1, 0.15, 0.2],
+    "MRW_replicates_per_seed_lambda2": 20,
+    "stress_length": 1024,
+    "stress_families": ["Student_t", "GARCH", "iid_Gaussian_mixture", "shuffled_MRW"],
+    "stress_replicates_per_seed_family": 40
+  },
+  "predeclared_acceptance": {
+    "primary_neural_score": "p_mrw",
+    "max_training_mean_fGn_FPR_at_calibration_H": 0.08,
+    "max_individual_checkpoint_fGn_FPR_at_calibration_H": 0.10,
+    "min_training_mean_TPR_lambda2_at_least_0_06": 0.90,
+    "max_training_mean_TPR_drop_vs_old_threshold": 0.03,
+    "interpolated_H_rule": "H=.3/.7 are held-out interpolation checks; flag mean FPR above .10. They do not establish a continuous-H guarantee.",
+    "interpretation": "Practical predeclared checks, not equivalence tests or guarantees of future FPR. Report all failures and confidence intervals without selecting a replacement rule on this test."
+  },
+  "invariants": [
+    "Never use calibration MRW positives; calibrate using null fGn only.",
+    "Complete and hash calibration before generating the new test set.",
+    "No use of E4 test outcomes for numerical threshold selection.",
+    "Original R1 thresholds evaluated unchanged on the same new test set for paired comparisons.",
+    "Keep signed-coordinate negative bias and stress-process acceptance findings; thresholding cannot repair them.",
+    "No H!=.5 MRW reference claims; no universal mechanism-discrimination claim.",
+    "No overwrite of previous results or checkpoints."
+  ]
+}

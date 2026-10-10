@@ -83,6 +83,13 @@ Quick runs test the pipeline, not the published numerical conclusions.
 
 ## Reproduction
 
+The additional validation suite is documented in
+[`revision2/experiments/README.md`](revision2/experiments/README.md). It includes
+independent simulator checks, signed versus clipped curvature, a common-sample
+estimator comparison, and nonwhite-fGn threshold tests. Its numerical scripts
+retain the original experiment definitions; protocol metadata is sanitized for
+public use. Generated results and checkpoints are not uploaded.
+
 The command order, prerequisites, and fixed protocols are in
 [`revision/README.md`](revision/README.md). Main entry points are:
 
@@ -122,6 +129,7 @@ historical protocol records.
 
 ```text
 revision/             corrected simulation, matched experiments and protocols
+revision2/experiments/ independent validation and threshold-transfer tests
 src/mrw_inverse/      spectrum estimation, projections, models and losses
 src/mrw_dl/           historical generation / neural modules
 experiments/          original analytic calibration and historical experiments

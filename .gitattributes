@@ -1,0 +1,2 @@
+# Preserve the pinned upstream bytes checked by provenance.json on every OS.
+revision2/experiments/vendor/pymultifracs/** -text
